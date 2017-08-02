@@ -1,0 +1,23 @@
+<div class='container-home'>
+<h1 class='title-1'> This is my title</h1>
+<%= link_to 'Enter here!', posts_path, class: "btn btn-info navbar-btn" %>
+</div>
+
+<script>
+const productSchoolLat = "21.3308";
+const productSchoolLng = "157.6871";
+
+$.ajax({
+  url: 'api/v1/weather',
+  type: 'GET',
+  data: { lat: productSchoolLat, lng: productSchoolLng } ,
+  contentType: 'application/json; charset=utf-8',
+  success: function (response) {
+    console.log(response);
+  },
+  error: function (error) {
+    console.log(error);
+  }
+});
+ 
+</script>
